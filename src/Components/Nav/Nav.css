@@ -1,0 +1,65 @@
+.nav {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+.logo-base,
+.logo-U {
+  fill: #f15a4f;
+}
+
+.logo-base {
+  overflow: hidden;
+  height: 50px;
+}
+
+.logo-U {
+  position: relative;
+  height: 39.5px;
+  right: 123px;
+  top: 54px;
+}
+
+.logo {
+  height: 50px;
+  overflow: hidden;
+  margin: 0 0 0 16px;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.subheader {
+  font-family: "RocaTwo", sans-serif;
+  color: #fdece2;
+  margin-left: auto;
+  position: relative;
+  bottom: 5px;
+}
+
+.socials {
+  margin: 0 36px 0 16px;
+}
+
+.socials-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+}
+
+.socials-list li {
+  padding: 0 10px;
+}
+
+.social-icon {
+  fill: #fdece2;
+  font-size: 22px;
+}
+
+.social-icon:hover {
+  fill: #f15a4f;
+}
