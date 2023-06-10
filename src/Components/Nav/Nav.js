@@ -22,7 +22,7 @@ const Nav = () => {
           animate={{
             opacity: 1,
             y: -66,
-            transition: { type: "bounce", duration: 0.8, delay: 0.3 },
+            transition: { type: "bounce", duration: 1, delay: 0.5 },
           }}
         >
           <path d="m17.6,39.5c10.5,0,17.6-7,17.6-17.6V0h-6.4v22c0,7.2-4.5,11.9-11.2,11.9s-11.2-4.8-11.2-11.9V0H0v21.9c0,10.6,7.1,17.6,17.6,17.6Z" />

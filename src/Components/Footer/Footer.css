@@ -2,12 +2,13 @@
   width: 100vw;
   min-height: 15vh;
   margin: 0;
-  padding: 0;
+  padding: 12px 0 0 0;
   background-color: inherit;
   color: #fdece2;
-  padding: 156px 0 0 0;
+
   display: flex;
   justify-content: space-between;
+  border-top: solid 1px #fdece2;
 }
 
 .signup-section {
@@ -39,6 +40,7 @@
 
 .address-section {
   margin: 0 42px 0 0;
+  /* width: 206px; */
 }
 
 .address-section h2 {
@@ -48,4 +50,21 @@
 
 .address-section p {
   font-family: "Heebo", sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .footer {
+    flex-direction: column;
+    padding: 100px 0 0 0;
+  }
+
+  .signup-section {
+    margin: 0 0 42px 22px;
+  }
+
+  .address-section {
+    margin: 0 22px 22px 0;
+    text-align: end;
+  }
 }
