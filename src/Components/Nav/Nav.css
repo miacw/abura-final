@@ -74,4 +74,18 @@
   .socials {
     margin: 0 12px;
   }
+
+  .logo {
+    height: 35px;
+  }
+
+  .logo-base {
+    height: inherit;
+  }
+
+  .logo-U {
+    height: 27px;
+    right: 86px;
+    top: 58px;
+  }
 }

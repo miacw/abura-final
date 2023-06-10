@@ -56,11 +56,15 @@
   /* For mobile phones: */
   .footer {
     flex-direction: column;
-    padding: 100px 0 0 0;
+    padding: 42px 0 0 0;
   }
 
   .signup-section {
     margin: 0 0 42px 22px;
+  }
+
+  .signup-section p {
+    margin: 0 16px 0 0;
   }
 
   .address-section {
