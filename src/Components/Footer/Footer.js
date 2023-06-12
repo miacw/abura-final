@@ -13,10 +13,13 @@ const Footer = () => {
       <div className="signup-section">
         <h1 className="footer-header">Join us at the Well...</h1>
         <p>Enter your email address to receive loop with news and updates.</p>
-        <motion.button className="signupBtn " whileHover={{ scale: 1.05 }}>
+        <motion.button
+          className="signupBtn "
+          whileHover={{ scale: 1.05 }}
+          onClick={triggerForm}
+        >
           Sign Up
         </motion.button>
-        <button onClick={triggerForm}>click</button>
       </div>
       <div className="address-section">
         <h2>ABURA LONDON</h2>
