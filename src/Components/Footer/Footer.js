@@ -3,12 +3,20 @@ import "./Footer.css";
 import { motion } from "framer-motion";
 
 const Footer = () => {
+  function triggerForm() {
+    window._klOnsite = window._klOnsite || [];
+    window._klOnsite.push(["openForm", "W3xmN6"]);
+  }
   return (
     <div className="footer">
       <div className="signup-section">
         <h1 className="footer-header">Join us at the Well...</h1>
         <p>Enter your email address to receive loop with news and updates.</p>
-        <motion.button className="signupBtn" whileHover={{ scale: 1.05 }}>
+        <motion.button
+          className="signupBtn"
+          onClick={triggerForm}
+          whileHover={{ scale: 1.05 }}
+        >
           Sign Up
         </motion.button>
       </div>
