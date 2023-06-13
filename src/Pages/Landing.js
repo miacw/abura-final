@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import App from "../App";
+import React from "react";
+
 import logo from "../public/content/well-red.png";
 import "./Landing.css";
 

@@ -1,17 +1,12 @@
 import "./App.css";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import Nav from "./Components/Nav/Nav";
 import Footer from "./Components/Footer/Footer";
 import Landing from "./Pages/Landing";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useParams,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [pageTitle, setPageTitle] = useState("Header");
