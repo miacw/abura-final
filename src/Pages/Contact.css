@@ -49,7 +49,9 @@ h3 {
   }
 
   .contact-details h1,
-  .contact-details h3 {
+  .contact-details h3,
+  .contact-details p,
+  .social-icons ul {
     margin: 8px 0;
   }
 
