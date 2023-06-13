@@ -48,6 +48,11 @@ h3 {
     padding: 52px 0 16px 0;
   }
 
+  .contact-details h1,
+  .contact-details h3 {
+    margin: 8px 0;
+  }
+
   .page-illustration {
     margin: 16px 0 0 0;
     padding: 16px;
