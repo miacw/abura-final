@@ -1,0 +1,59 @@
+.contact-page {
+  min-height: calc(100vh - 10vh);
+  background-color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Heebo", sans-serif;
+  color: #fdece2;
+  background-color: inherit;
+}
+
+.contact-details h1,
+h3 {
+  margin: 12px 0;
+}
+
+.logo-header {
+  font-family: "RocaTwo", sans-serif;
+}
+
+.wellImg {
+  width: 300px;
+}
+
+.social-icons ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.social-icons ul li {
+  margin-right: 16px;
+}
+
+.social-icons ul li a,
+.social-icons ul li a:active {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .contact-page {
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .contact-details {
+    padding: 52px 0 16px 0;
+  }
+
+  .page-illustration {
+    margin: 16px 0 0 0;
+    padding: 16px;
+  }
+
+  .wellImg {
+    width: 200px;
+  }
+}

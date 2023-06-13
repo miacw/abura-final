@@ -3,7 +3,7 @@ import "./Nav.css";
 import { motion } from "framer-motion";
 import { BsTwitter, BsInstagram } from "react-icons/bs";
 
-const Nav = () => {
+const Nav = (props) => {
   return (
     <div className="nav">
       <div className="logo">
@@ -28,7 +28,7 @@ const Nav = () => {
           <path d="m17.6,39.5c10.5,0,17.6-7,17.6-17.6V0h-6.4v22c0,7.2-4.5,11.9-11.2,11.9s-11.2-4.8-11.2-11.9V0H0v21.9c0,10.6,7.1,17.6,17.6,17.6Z" />
         </motion.svg>
       </div>
-      <h2 className="subheader">A DISAPORA LEGACY</h2>
+      <h2 className="subheader">{props.title}</h2>
       <div className="socials">
         <ul className="socials-list">
           <motion.li whileHover={{ scale: 1.2, transition: { type: "ease" } }}>
