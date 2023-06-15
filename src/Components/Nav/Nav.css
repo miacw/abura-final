@@ -183,4 +183,8 @@
   .burger-bar {
     width: 3em;
   }
+
+  .burger-bar.clicked:nth-child(3) {
+    transform: rotate(135deg) translate(-0.3em, 1em);
+  }
 }
