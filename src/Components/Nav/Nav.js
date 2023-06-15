@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { BsTwitter, BsInstagram } from "react-icons/bs";
 
 const Nav = (props) => {
-  const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
+  const [burger_class, setBurgerClass] = useState("burger-bar closed");
   const [menu_class, setMenuClass] = useState("menu hidden");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
 
@@ -39,11 +39,11 @@ const Nav = (props) => {
 
   const updateMenu = () => {
     if (!isMenuClicked) {
-      setBurgerClass("burger-bar clicked");
       setMenuClass("menu visible");
+      setBurgerClass("open");
     } else {
-      setBurgerClass("burger-bar unclicked");
       setMenuClass("menu hidden");
+      setBurgerClass("closed");
     }
     setIsMenuClicked(!isMenuClicked);
   };
@@ -75,11 +75,17 @@ const Nav = (props) => {
         </div>
       </Link>
       <h2 className="subheader">{props.title}</h2>
-
+      {/* 
       <div className="burger-menu" onClick={updateMenu}>
         <div className={burger_class}></div>
         <div className={burger_class}></div>
         <div className={burger_class}></div>
+      </div> */}
+      <div id="nav-icon3" className={burger_class} onClick={updateMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
       <div className={menu_class}>
         <motion.ul
