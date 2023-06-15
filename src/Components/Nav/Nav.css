@@ -184,7 +184,8 @@
     width: 3em;
   }
 
-  .burger-bar.clicked:nth-child(1) {
-    transform: rotate(135deg) translate(0.5em, 1.25em);
+  .burger-bar.clicked:nth-child(3) {
+    -webkit-transform: rotate(135deg) translate(-0.3em, 1em);
+    transform: rotate(135deg) translate(-0.4em, 0.8em);
   }
 }
