@@ -181,9 +181,4 @@
   .burger-bar {
     width: 3em;
   }
-
-  burger-bar.clicked:nth-child(3) {
-    -webkit-transform: rotate(135deg) translate(-0.35em, 1em);
-    transform: rotate(135deg) translate(-0.35em, 1em);
-  }
 }
