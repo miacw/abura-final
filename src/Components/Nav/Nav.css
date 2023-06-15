@@ -101,6 +101,7 @@
 
 /* --- animations --- */
 .burger-bar.clicked:nth-child(1) {
+  -webkit-transform: rotate(45deg) translate(0.75em, 1.25em);
   transform: rotate(45deg) translate(0.75em, 1.25em);
   transition: ease-out 0.5s;
 }
@@ -111,6 +112,7 @@
 }
 
 .burger-bar.clicked:nth-child(3) {
+  -webkit-transform: rotate(135deg) translate(-0.5em, 1em);
   transform: rotate(135deg) translate(-0.5em, 1em);
   transition: ease-out 0.5s;
 }
