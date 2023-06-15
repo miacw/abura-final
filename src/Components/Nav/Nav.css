@@ -186,6 +186,6 @@
 
   .burger-bar.clicked:nth-child(3) {
     -webkit-transform: rotate(135deg) translate(-0.3em, 1em);
-    transform: rotate(135deg) translate(-0.4em, 0.8em);
+    transform: rotate(135deg) translate(-0.4em, 1em);
   }
 }
