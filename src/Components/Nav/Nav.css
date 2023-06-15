@@ -35,13 +35,9 @@
 .subheader {
   font-family: "RocaTwo", sans-serif;
   color: #fdece2;
-  margin-left: auto;
+  margin: 0 36px 0 auto;
   position: relative;
   bottom: 5px;
-}
-
-.socials {
-  margin: 0 36px 0 16px;
 }
 
 .socials-list {
@@ -52,10 +48,6 @@
   margin: 0;
 }
 
-.socials-list li {
-  padding: 0 10px;
-}
-
 .social-icon {
   fill: #fdece2;
   font-size: 22px;
@@ -63,16 +55,113 @@
 
 .social-icon:hover {
   fill: #f15a4f;
+  cursor: pointer;
+}
+
+.burger-menu {
+  height: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.burger-bar {
+  width: 3.5em;
+  height: 0.3em;
+  background-color: #fdece2;
+  border-radius: 0.5em;
+}
+
+.menu {
+  width: 200px;
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.burger-menu {
+  margin: 0 26px 0 0;
+}
+
+/* --- sliding menu --- */
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: inherit;
+}
+
+/* --- animations --- */
+.burger-bar.clicked:nth-child(1) {
+  transform: rotate(45deg) translate(0.75em, 1.25em);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(2) {
+  transform: scale(0.05);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(3) {
+  transform: rotate(135deg) translate(-0.5em, 1em);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.unclicked {
+  transform: rotate(0) translate(0);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: 100%;
+  height: 50%;
+  padding: 16px 22px 16px 16px;
+  align-items: end;
+  justify-content: space-evenly;
+}
+
+.menu-list li {
+  padding: 8px 0;
+  color: #fdece2;
+  font-family: "RocaTwo", sans-serif;
+  font-size: 20px;
+}
+.menu-list li:hover {
+  color: #f15a4f;
+  cursor: pointer;
+  transition: ease 0.2s;
+}
+
+.menu-link {
+  color: #fdece2;
+  text-decoration: none;
+}
+
+.menu-link:hover {
+  color: #f15a4f;
+  scale: 1.1;
+}
+.socials-list li {
+  display: flex;
+  justify-content: end;
+  padding: 0 0 0 16px;
 }
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .subheader {
     display: none;
-  }
-
-  .socials {
-    margin: 0 12px;
   }
 
   .logo {
