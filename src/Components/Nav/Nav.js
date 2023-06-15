@@ -51,7 +51,7 @@ const Nav = (props) => {
   return (
     <div className="nav">
       <Link to="/">
-        <div className="logo" onClick={updateMenu}>
+        <div className="logo" onClick={setIsMenuClicked(false)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 207.3 50.1"
