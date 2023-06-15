@@ -161,8 +161,8 @@
 }
 
 #nav-icon3 {
-  width: 56px;
-  height: 3em;
+  width: 60px;
+  height: 45px;
   position: relative;
   margin: 0 26px 0 0;
   z-index: 1;
@@ -253,12 +253,6 @@
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-}
-
-#nav-icon3.open span:nth-child(4) {
-  top: 0;
-
-  left: 0;
 }
 
 @media only screen and (max-width: 768px) {
