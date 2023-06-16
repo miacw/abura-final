@@ -43,6 +43,11 @@
   /* width: 206px; */
 }
 
+.address-section h2,
+.address-section p {
+  margin: 8px 0;
+}
+
 .address-section h2 {
   font-family: "RocaTwo", sans-serif;
   font-size: 16px;

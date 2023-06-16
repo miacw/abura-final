@@ -23,12 +23,12 @@ const Footer = () => {
       </div>
       <div className="address-section">
         <h2>ABURA LONDON</h2>
-        <p>
+        {/* <p>
           The Africa Centre
           <br /> 66 Great Suffolk Street
           <br /> LONDON
           <br /> SE1 0BL
-        </p>
+        </p> */}
         <p>info@aburalondon.com</p>
       </div>
     </div>

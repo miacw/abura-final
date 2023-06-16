@@ -12,12 +12,12 @@ const Nav = (props) => {
   const ItemVariants = {
     open: {
       opacity: 1,
-      y: 20,
+      y: 0,
       transition: { type: "spring", stiffness: 300, damping: 24 },
     },
     closed: {
       opacity: 0,
-      y: 0,
+      y: -20,
       transition: { duration: 0.2 },
     },
   };
@@ -87,7 +87,14 @@ const Nav = (props) => {
         <span></span>
         <span></span>
       </div>
-      <div className={menu_class}>
+      <motion.div
+        className={menu_class}
+        animate={isMenuClicked ? "open" : "closed"}
+        variants={{
+          open: { clipPath: "inset(0% 0% 0% 0% round 4px)" },
+          closed: { clipPath: "inset(10% 50% 90% 50% round 4px)" },
+        }}
+      >
         <motion.ul
           className="menu-list"
           initial={false}
@@ -131,7 +138,7 @@ const Nav = (props) => {
             </div>
           </motion.li>
         </motion.ul>
-      </div>
+      </motion.div>
     </div>
   );
 };
