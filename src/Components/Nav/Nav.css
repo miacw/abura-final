@@ -35,9 +35,13 @@
 .subheader {
   font-family: "RocaTwo", sans-serif;
   color: #fdece2;
-  margin: 0 36px 0 auto;
+  margin: 0 8px 0 auto;
   position: relative;
   bottom: 5px;
+}
+
+.socials {
+  margin: 0 4px;
 }
 
 .socials-list {
@@ -45,12 +49,11 @@
   display: flex;
   justify-content: space-evenly;
   padding: 0;
-  margin: 0;
 }
 
 .social-icon {
   fill: #fdece2;
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .social-icon:hover {
@@ -145,6 +148,10 @@
   transition: ease 0.2s;
 }
 
+.menu-list .socials {
+  display: none;
+}
+
 .menu-link {
   color: #fdece2;
   text-decoration: none;
@@ -156,16 +163,20 @@
 }
 .socials-list li {
   display: flex;
-  justify-content: end;
-  padding: 0 0 0 16px;
+  justify-content: center;
+
+  padding: 0 8px;
 }
 
 #nav-icon3 {
   width: 60px;
   height: 45px;
   position: relative;
+
   margin: 0 26px 0 0;
   z-index: 1;
+  scale: 0.6;
+  bottom: 1px;
 
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -261,6 +272,10 @@
     display: none;
   }
 
+  #nav-header-socials {
+    display: none;
+  }
+
   .logo {
     height: 35px;
   }
@@ -302,6 +317,10 @@
 
   .menu-list li {
     padding: 12px 0;
+  }
+
+  .menu-list .socials {
+    display: inherit;
   }
 
   .socials-list li {

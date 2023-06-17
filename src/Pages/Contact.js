@@ -10,6 +10,12 @@ const Contact = ({ setTitle }) => {
     <div className="contact-page">
       <div className="contact-details">
         <h1 className="logo-header">ABURA LONDON</h1>
+        <p>
+          The Africa Centre
+          <br /> 66 Great Suffolk Street
+          <br /> LONDON
+          <br /> SE1 0BL
+        </p>
         <h3>For Enquiries:</h3>
         <p>info@aburalondon.com</p>
         <h3>Join the community:</h3>

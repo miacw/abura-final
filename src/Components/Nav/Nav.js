@@ -75,6 +75,20 @@ const Nav = (props) => {
         </div>
       </Link>
       <h2 className="subheader">{props.title}</h2>
+      <div className="socials" id="nav-header-socials">
+        <ul className="socials-list">
+          <motion.li whileHover={{ scale: 1.1, transition: { type: "ease" } }}>
+            <a href="https://www.instagram.com/aburalondon/">
+              <BsInstagram className="social-icon" />
+            </a>
+          </motion.li>
+          <motion.li whileHover={{ scale: 1.1 }}>
+            <a href="https://twitter.com/aburalondon?s=20">
+              <BsTwitter className="social-icon" />
+            </a>
+          </motion.li>
+        </ul>
+      </div>
       {/* 
       <div className="burger-menu" onClick={updateMenu}>
         <div className={burger_class}></div>

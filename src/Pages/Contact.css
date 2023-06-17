@@ -9,9 +9,16 @@
   background-color: inherit;
 }
 
-.contact-details h1,
-h3 {
-  margin: 12px 0;
+.contact-details h1 {
+  margin: 8px 0;
+}
+
+.contact-details h3 {
+  margin: 0;
+}
+
+.contact-details p {
+  margin: 0 0 8px 0;
 }
 
 .logo-header {
@@ -26,6 +33,7 @@ h3 {
   display: flex;
   list-style: none;
   padding: 0;
+  margin: 4px 0;
 }
 
 .social-icons ul li {
