@@ -56,10 +56,13 @@
     padding: 52px 0 16px 0;
   }
 
-  .contact-details h3,
   .contact-details p,
   .social-icons ul {
-    margin: 8px 0;
+    margin: 4px 0;
+  }
+
+  .contact-details h3 {
+    margin: 0;
   }
 
   .page-illustration {
