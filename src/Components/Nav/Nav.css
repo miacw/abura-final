@@ -266,6 +266,23 @@
   transform: rotate(0deg);
 }
 
+/* .modal {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #f15a4f;
+  position: relative;
+  top: 0;
+  left: 0;
+} */
+
+.show {
+  display: inherit;
+}
+
+.hide {
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .subheader {
@@ -293,6 +310,7 @@
   #nav-icon3 {
     scale: 0.8;
     margin: 0 18px 0 0;
+    top: 2px;
   }
 
   .menu {
