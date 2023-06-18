@@ -3,12 +3,12 @@ import "./Nav.css";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { BsTwitter, BsInstagram } from "react-icons/bs";
-// import Modal from "../Modal";
 
 const Nav = (props) => {
   const [burger_class, setBurgerClass] = useState("burger-bar closed");
   const [menu_class, setMenuClass] = useState("menu hidden");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const ItemVariants = {
     open: {
@@ -49,9 +49,21 @@ const Nav = (props) => {
     setIsMenuClicked(!isMenuClicked);
   };
 
+  const updateModal = () => {
+    setShowModal(!showModal);
+  };
+
   return (
     <>
-      {/* <Modal /> */}
+      {/* <div className="modal">
+        <div className="modal-contents">
+          <h1>diaspora</h1>
+          <h2>noun</h2>
+          <p>
+            the dispersion or spread of a people from their original homeland
+          </p>
+        </div>
+      </div> */}
       <div className="nav">
         <Link to="/" onClick={isMenuClicked ? updateMenu : null}>
           <div className="logo">
@@ -77,15 +89,51 @@ const Nav = (props) => {
             </motion.svg>
           </div>
         </Link>
+
         <motion.h2
           className="subheader"
           whileHover={() => {
             if (props.title === "A DIASPORA LEGACY") {
-              alert("testing");
+              // setShowModal(true);
             }
           }}
         >
+          <motion.span
+            className="reveal"
+            initial={false}
+            animate={{
+              type: "spring",
+              bounce: 0,
+              duration: 0.7,
+              delayChildren: 0.3,
+              staggerChildren: 0.3,
+            }}
+            style={{ display: "inline-block" }}
+          >
+            <motion.span
+              initial={{ y: 30 }}
+              animate={{ y: 0 }}
+              style={{ display: "inline-block" }}
+            >
+              .
+            </motion.span>
+            <motion.span
+              initial={{ y: 30 }}
+              animate={{ y: 0 }}
+              style={{ display: "inline-block" }}
+            >
+              .
+            </motion.span>
+            <motion.span
+              initial={{ y: 30 }}
+              animate={{ y: 0 }}
+              style={{ display: "inline-block" }}
+            >
+              .
+            </motion.span>
+          </motion.span>
           {props.title}
+          {/* <span className="reveal">Click me</span> */}
         </motion.h2>
 
         <div className="socials" id="nav-header-socials">
