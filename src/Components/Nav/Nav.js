@@ -98,7 +98,7 @@ const Nav = (props) => {
             }
           }}
         >
-          <motion.span
+          {/* <motion.span
             className="reveal"
             initial={false}
             animate={{
@@ -131,7 +131,7 @@ const Nav = (props) => {
             >
               .
             </motion.span>
-          </motion.span>
+          </motion.span> */}
           {props.title}
           {/* <span className="reveal">Click me</span> */}
         </motion.h2>
