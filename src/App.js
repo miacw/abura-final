@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Nav from "./Components/Nav/Nav";
 import Footer from "./Components/Footer/Footer";
 import Landing from "./Pages/Landing";
@@ -14,14 +14,36 @@ function App() {
   function updatePageTitle(title) {
     setPageTitle(title);
   }
+
+  const [definition, setDefinition] = useState(false);
+  function toggleDefinition() {
+    if (definition) {
+      setDefinition(false);
+    } else {
+      setDefinition(true);
+    }
+  }
+
+  // useEffect(() => {
+  //   // const timer = setTimeout(() => {
+  //   //   if (!definition) {
+  //   //     setDefinition(true);
+  //   //   }
+  //   // }, 5000);
+  //   setDefinition(false);
+  //   return clearTimeout(timer);
+  // }, [definition]);
+
   return (
     <div className="App">
       <Router>
-        <Nav title={pageTitle} />
+        <Nav title={pageTitle} toggleDefinition={toggleDefinition} />
         <Routes>
           <Route
             path="/"
-            element={<Landing setTitle={updatePageTitle} />}
+            element={
+              <Landing setTitle={updatePageTitle} definition={definition} />
+            }
           ></Route>
           <Route
             path="/about"

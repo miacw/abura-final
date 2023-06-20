@@ -3,12 +3,22 @@ import "./Nav.css";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { BsTwitter, BsInstagram } from "react-icons/bs";
+import { useEffect } from "react";
 
-const Nav = (props) => {
+const Nav = ({ title, toggleDefinition }) => {
   const [burger_class, setBurgerClass] = useState("burger-bar closed");
   const [menu_class, setMenuClass] = useState("menu hidden");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [underline, setUnderline] = useState(false);
+
+  useEffect(() => {
+    if (underline) {
+      setShowModal(true);
+    } else {
+      setShowModal(false);
+    }
+  }, [underline]);
 
   const ItemVariants = {
     open: {
@@ -55,15 +65,6 @@ const Nav = (props) => {
 
   return (
     <>
-      {/* <div className="modal">
-        <div className="modal-contents">
-          <h1>diaspora</h1>
-          <h2>noun</h2>
-          <p>
-            the dispersion or spread of a people from their original homeland
-          </p>
-        </div>
-      </div> */}
       <div className="nav">
         <Link to="/" onClick={isMenuClicked ? updateMenu : null}>
           <div className="logo">
@@ -90,49 +91,27 @@ const Nav = (props) => {
           </div>
         </Link>
 
-        <motion.h2
-          className="subheader"
-          whileHover={() => {
-            if (props.title === "A DIASPORA LEGACY") {
-              // setShowModal(true);
-            }
-          }}
-        >
-          {/* <motion.span
-            className="reveal"
-            initial={false}
-            animate={{
-              type: "spring",
-              bounce: 0,
-              duration: 0.7,
-              delayChildren: 0.3,
-              staggerChildren: 0.3,
-            }}
-            style={{ display: "inline-block" }}
-          >
-            <motion.span
-              initial={{ y: 30 }}
-              animate={{ y: 0 }}
-              style={{ display: "inline-block" }}
-            >
-              .
-            </motion.span>
-            <motion.span
-              initial={{ y: 30 }}
-              animate={{ y: 0 }}
-              style={{ display: "inline-block" }}
-            >
-              .
-            </motion.span>
-            <motion.span
-              initial={{ y: 30 }}
-              animate={{ y: 0 }}
-              style={{ display: "inline-block" }}
-            >
-              .
-            </motion.span>
-          </motion.span> */}
-          {props.title}
+        <motion.h2 className="subheader">
+          {title === "A DIASPORA LEGACY" ? (
+            <div className="landing-title">
+              <p>A</p>
+              <motion.p
+                whileHover={() => {
+                  setUnderline(true);
+                }}
+                onHoverEnd={() => {
+                  setUnderline(false);
+                }}
+                className={underline ? "underlined" : "p"}
+                // onClick={toggleDefinition()}
+              >
+                DIASPORA
+              </motion.p>
+              <p>LEGACY</p>
+            </div>
+          ) : (
+            title
+          )}
           {/* <span className="reveal">Click me</span> */}
         </motion.h2>
 

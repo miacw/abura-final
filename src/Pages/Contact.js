@@ -16,7 +16,7 @@ const Contact = ({ setTitle }) => {
           <br /> LONDON
           <br /> SE1 0BL
         </p>
-        <h3>For Enquiries:</h3>
+        <h3>For enquiries:</h3>
         <p>info@aburalondon.com</p>
         <h3>Join the community:</h3>
         <div className="social-icons">

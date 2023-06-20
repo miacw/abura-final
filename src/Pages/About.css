@@ -19,7 +19,7 @@
   font-family: "RocaTwo", sans-serif;
   color: #fdece2;
   font-size: 26px;
-  line-height: 28px;
+  line-height: 40px;
   width: 60%;
   margin: 12px 0;
 }
@@ -33,5 +33,6 @@
   .about-text {
     font-size: 16px;
     width: 70%;
+    line-height: 28px;
   }
 }
