@@ -21,7 +21,7 @@ const Landing = ({ setTitle, definition }) => {
           </p>
         </div>
         <motion.div
-          initial={definition ? { opacity: 0 } : { opacity: 100 }}
+          initial={{ opacity: 0 }}
           animate={definition ? { opacity: 100 } : { opacity: 0 }}
           className="modal"
         >
