@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Nav from "./Components/Nav/Nav";
 import Footer from "./Components/Footer/Footer";
 import Landing from "./Pages/Landing";
@@ -16,13 +16,13 @@ function App() {
   }
 
   const [definition, setDefinition] = useState(false);
-  function toggleDefinition() {
-    if (definition) {
-      setDefinition(false);
-    } else {
-      setDefinition(true);
-    }
-  }
+  // function toggleDefinition() {
+  //   if (definition) {
+  //     setDefinition(false);
+  //   } else {
+  //     setDefinition(true);
+  //   }
+  // }
 
   // useEffect(() => {
   //   // const timer = setTimeout(() => {
@@ -34,10 +34,17 @@ function App() {
   //   return clearTimeout(timer);
   // }, [definition]);
 
+  function closeModal() {
+    setDefinition(true);
+    setTimeout(() => {
+      setDefinition(false);
+    }, 5000);
+  }
+
   return (
     <div className="App">
       <Router>
-        <Nav title={pageTitle} toggleDefinition={toggleDefinition} />
+        <Nav title={pageTitle} toggleDefinition={closeModal} />
         <Routes>
           <Route
             path="/"

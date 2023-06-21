@@ -45,13 +45,24 @@
   top: 50%;
   left: 75%;
 }
-
-.modal .show {
-  display: inherit;
+.modal-contents {
+  width: 300px;
 }
 
-.hide {
-  display: none;
+.modal h1 {
+  font-family: "RocaTwo", sans-serif;
+}
+
+.modal h2,
+.modal p {
+  font-family: "Heebo", sans-serif;
+  font-weight: 200;
+}
+
+.modal h1,
+.modal h2,
+.modal p {
+  margin: 0px 0;
 }
 
 /* .modal {

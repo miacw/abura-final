@@ -3,22 +3,20 @@ import "./Nav.css";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { BsTwitter, BsInstagram } from "react-icons/bs";
-import { useEffect } from "react";
 
 const Nav = ({ title, toggleDefinition }) => {
   const [burger_class, setBurgerClass] = useState("burger-bar closed");
   const [menu_class, setMenuClass] = useState("menu hidden");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
-  const [showModal, setShowModal] = useState(false);
-  const [underline, setUnderline] = useState(false);
 
-  useEffect(() => {
-    if (underline) {
-      setShowModal(true);
-    } else {
-      setShowModal(false);
-    }
-  }, [underline]);
+  const [underline, setUnderline] = useState(false);
+  const [logoUnderline, setLogoUnderline] = useState(false);
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setShowModal(false);
+  //   }, 5000);
+  // }, [underline]);
 
   const ItemVariants = {
     open: {
@@ -59,15 +57,19 @@ const Nav = ({ title, toggleDefinition }) => {
     setIsMenuClicked(!isMenuClicked);
   };
 
-  const updateModal = () => {
-    setShowModal(!showModal);
-  };
-
   return (
     <>
       <div className="nav">
         <Link to="/" onClick={isMenuClicked ? updateMenu : null}>
-          <div className="logo">
+          <motion.div
+            className={logoUnderline ? " logo logo-underlined" : "logo"}
+            whileHover={() => {
+              setLogoUnderline(true);
+            }}
+            onHoverEnd={() => {
+              setLogoUnderline(false);
+            }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 207.3 50.1"
@@ -88,7 +90,7 @@ const Nav = ({ title, toggleDefinition }) => {
             >
               <path d="m17.6,39.5c10.5,0,17.6-7,17.6-17.6V0h-6.4v22c0,7.2-4.5,11.9-11.2,11.9s-11.2-4.8-11.2-11.9V0H0v21.9c0,10.6,7.1,17.6,17.6,17.6Z" />
             </motion.svg>
-          </div>
+          </motion.div>
         </Link>
 
         <motion.h2 className="subheader">
@@ -103,7 +105,7 @@ const Nav = ({ title, toggleDefinition }) => {
                   setUnderline(false);
                 }}
                 className={underline ? "underlined" : "p"}
-                // onClick={toggleDefinition()}
+                onClick={toggleDefinition}
               >
                 DIASPORA
               </motion.p>

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import logo from "../public/content/well-red.png";
 import "./Landing.css";
@@ -19,15 +20,19 @@ const Landing = ({ setTitle, definition }) => {
             diaspora.
           </p>
         </div>
-        <div className={definition ? "modal show" : "hide"}>
+        <motion.div
+          initial={definition ? { opacity: 0 } : { opacity: 100 }}
+          animate={definition ? { opacity: 100 } : { opacity: 0 }}
+          className="modal"
+        >
           <div className="modal-contents">
             <h1>diaspora</h1>
             <h2>noun</h2>
             <p>
-              the dispersion or spread of a people from their original homeland
+              the dispersion or spread of a people from their original homeland.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
