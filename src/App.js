@@ -16,6 +16,7 @@ function App() {
   }
 
   const [definition, setDefinition] = useState(false);
+  const [abura, setAbura] = useState(false);
   // function toggleDefinition() {
   //   if (definition) {
   //     setDefinition(false);
@@ -38,18 +39,33 @@ function App() {
     setDefinition(true);
     setTimeout(() => {
       setDefinition(false);
-    }, 5000);
+    }, 6000);
+  }
+
+  function closeAbura() {
+    setAbura(true);
+    setTimeout(() => {
+      setAbura(false);
+    }, 6000);
   }
 
   return (
     <div className="App">
       <Router>
-        <Nav title={pageTitle} toggleDefinition={closeModal} />
+        <Nav
+          title={pageTitle}
+          toggleDefinition={closeModal}
+          toggleAbura={closeAbura}
+        />
         <Routes>
           <Route
             path="/"
             element={
-              <Landing setTitle={updatePageTitle} definition={definition} />
+              <Landing
+                setTitle={updatePageTitle}
+                definition={definition}
+                abura={abura}
+              />
             }
           ></Route>
           <Route

@@ -45,6 +45,10 @@
   top: 50%;
   left: 75%;
 }
+
+.modal.abura {
+  left: 10%;
+}
 .modal-contents {
   width: 300px;
 }

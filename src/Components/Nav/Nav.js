@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { BsTwitter, BsInstagram } from "react-icons/bs";
 
-const Nav = ({ title, toggleDefinition }) => {
+const Nav = ({ title, toggleDefinition, toggleAbura }) => {
   const [burger_class, setBurgerClass] = useState("burger-bar closed");
   const [menu_class, setMenuClass] = useState("menu hidden");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
@@ -61,15 +61,7 @@ const Nav = ({ title, toggleDefinition }) => {
     <>
       <div className="nav">
         <Link to="/" onClick={isMenuClicked ? updateMenu : null}>
-          <motion.div
-            className={logoUnderline ? " logo logo-underlined" : "logo"}
-            whileHover={() => {
-              setLogoUnderline(true);
-            }}
-            onHoverEnd={() => {
-              setLogoUnderline(false);
-            }}
-          >
+          <motion.div className="logo" onClick={toggleAbura}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 207.3 50.1"
