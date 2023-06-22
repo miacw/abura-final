@@ -70,7 +70,11 @@ const Nav = ({ title, toggleDefinition, toggleAbura }) => {
         >
           <motion.div
             className={logoUnderline ? "logo underlined-logo" : "logo"}
-            onClick={toggleAbura}
+            onClick={() => {
+              if (pathLocation.pathname === "/") {
+                toggleAbura();
+              }
+            }}
             whileHover={() => {
               setLogoUnderline(true);
             }}
