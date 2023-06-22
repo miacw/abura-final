@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
 import logo from "../public/content/well-red.png";
 import ghana from "../public/content/ghana.png";
@@ -7,6 +8,7 @@ import "./Landing.css";
 
 const Landing = ({ setTitle, definition, abura }) => {
   setTitle("A DIASPORA LEGACY");
+  const pathLocation = useLocation();
   return (
     <div className="landing-content">
       <motion.div
@@ -25,7 +27,11 @@ const Landing = ({ setTitle, definition, abura }) => {
       <div className="tagline-contents">
         <motion.div
           initial={{ opacity: 0 }}
-          animate={abura ? { opacity: 100 } : { opacity: 0 }}
+          animate={
+            abura && pathLocation.pathname === "/"
+              ? { opacity: 100 }
+              : { opacity: 0 }
+          }
           className="modal abura"
         >
           <div className="modal-contents">
