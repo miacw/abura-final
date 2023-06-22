@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import "./Nav.css";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -11,6 +12,8 @@ const Nav = ({ title, toggleDefinition, toggleAbura }) => {
 
   const [underline, setUnderline] = useState(false);
   const [logoUnderline, setLogoUnderline] = useState(false);
+
+  const pathLocation = useLocation();
 
   // useEffect(() => {
   //   setTimeout(() => {
@@ -96,7 +99,13 @@ const Nav = ({ title, toggleDefinition, toggleAbura }) => {
               <path d="m17.6,39.5c10.5,0,17.6-7,17.6-17.6V0h-6.4v22c0,7.2-4.5,11.9-11.2,11.9s-11.2-4.8-11.2-11.9V0H0v21.9c0,10.6,7.1,17.6,17.6,17.6Z" />
             </motion.svg>
           </motion.div>
-          <div className={logoUnderline ? "underline-span" : "hide"}></div>
+          <div
+            className={
+              logoUnderline && pathLocation.pathname === "/"
+                ? "underline-span"
+                : "hide"
+            }
+          ></div>
         </Link>
 
         <motion.h2 className="subheader">
