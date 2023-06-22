@@ -60,8 +60,21 @@ const Nav = ({ title, toggleDefinition, toggleAbura }) => {
   return (
     <>
       <div className="nav">
-        <Link to="/" onClick={isMenuClicked ? updateMenu : null}>
-          <motion.div className="logo" onClick={toggleAbura}>
+        <Link
+          to="/"
+          onClick={isMenuClicked ? updateMenu : null}
+          className="home-link"
+        >
+          <motion.div
+            className={logoUnderline ? "logo underlined-logo" : "logo"}
+            onClick={toggleAbura}
+            whileHover={() => {
+              setLogoUnderline(true);
+            }}
+            onHoverEnd={() => {
+              setLogoUnderline(false);
+            }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 207.3 50.1"
@@ -83,6 +96,7 @@ const Nav = ({ title, toggleDefinition, toggleAbura }) => {
               <path d="m17.6,39.5c10.5,0,17.6-7,17.6-17.6V0h-6.4v22c0,7.2-4.5,11.9-11.2,11.9s-11.2-4.8-11.2-11.9V0H0v21.9c0,10.6,7.1,17.6,17.6,17.6Z" />
             </motion.svg>
           </motion.div>
+          <div className={logoUnderline ? "underline-span" : "hide"}></div>
         </Link>
 
         <motion.h2 className="subheader">

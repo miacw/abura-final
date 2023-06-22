@@ -49,6 +49,12 @@
 .modal.abura {
   left: 10%;
 }
+
+.ghana-img {
+  position: relative;
+  top: 6px;
+  padding: 0 6px;
+}
 .modal-contents {
   width: 300px;
 }

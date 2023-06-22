@@ -31,7 +31,13 @@ const Landing = ({ setTitle, definition, abura }) => {
           <div className="modal-contents">
             <h1>
               abura | Twi{" "}
-              <img src={ghana} alt="ghana-flag" width={32} height={32}></img>
+              <img
+                src={ghana}
+                className="ghana-img"
+                alt="ghana-flag"
+                width={32}
+                height={32}
+              ></img>
             </h1>
             <h2>noun</h2>
             <p>the local watering hole where the community comes together.</p>

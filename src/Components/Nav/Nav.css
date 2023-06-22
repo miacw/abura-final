@@ -5,6 +5,11 @@
   justify-content: space-between;
 }
 
+.home-link {
+  position: absolute;
+  top: 20px;
+}
+
 .logo-base,
 .logo-U {
   fill: #f15a4f;
@@ -26,6 +31,21 @@
   height: 50px;
   overflow: hidden;
   margin: 0 0 0 16px;
+}
+
+/* .underlined-logo {
+  border-bottom: solid 2px #f15a4f;
+} */
+
+.underline-span {
+  height: 2px;
+  background-color: #f15a4f;
+  width: 210px;
+  position: absolute;
+  left: 16px;
+
+  top: 52px;
+  position: absolute;
 }
 
 .logo:hover {
