@@ -106,4 +106,8 @@
   .modal.abura {
     display: none;
   }
+
+  .modal {
+    display: none;
+  }
 }
