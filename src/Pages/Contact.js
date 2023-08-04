@@ -26,11 +26,11 @@ const Contact = ({ setTitle }) => {
                 <BsInstagram className="social-icon" />
               </a>
             </motion.li>
-            <motion.li whileHover={{ scale: 1.2 }}>
+            {/* <motion.li whileHover={{ scale: 1.2 }}>
               <a href="https://twitter.com/aburalondon?s=20">
                 <BsTwitter className="social-icon" />
               </a>
-            </motion.li>
+            </motion.li> */}
           </ul>
         </div>
         <p>@aburalondon</p>
